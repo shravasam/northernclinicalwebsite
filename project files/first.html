@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #9999ff;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: red;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Home {background-color: none;}
+#Doctors {background-color: none;}
+#Services {background-color: none;}
+#Appointment {background-color: #989898;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Doctors', this, 'white')" >Doctors</button>
+<button class="tablink" onclick="openPage('Services', this, 'blue')">Services</button>
+<button class="tablink" onclick="openPage('Appointment', this, 'orange')">Appointment</button>
+
+
+
+
+<div id="Home" class="tabcontent">
+	<h1 align = "center" > WELCOME TO MEDICAL CLINIC NORTHERN FRANCE <h1>
+	<img src="carrousel.jpg" alt="carrousel_1" style="width:100%">
+  
+</div>
+
+<div id="Doctors" class="tabcontent"> 
+
+<img src="drchristinaaramouny_1.png" alt="drchristinaaramouny_1" style="width:25%">
+      <h4>DR. CHRISTINAARAMOUNY</h4>
+      <p>Dr. Christina Aramouny, is specialized in child and adult psychiatry, addictology, and legal psychiatry.
+She graduated from the University of St. Joseph Lebanon, Université Catholique de Louvain Belgium, Paris-Sud and Paris Descartes France. 
+Dr. C. Aramouny has wide experience in Lebanon and in Belgium. She is involved in clinical research.</p>
+
+
+	<img src="dr george.png" alt="dr george" style="width:25%">
+<h4>DR GEORGE</h4>
+<p>Dr. Georges BOUSTANY, consultant in General Surgery; specialized in Colorectal, Hepato-Bilio-Pancratic, Oncologic and Bariatric Surgery. He is graduated from the Lebanese University, specialized in France, UPMC and UPEC, Paris. Dr. G BOUSTANY has wide experience in Lebanon and France. He is Fellow of the European Board of General Surgery (FEBS) and the Lebanese Board of General Surgery. </p>
+
+
+
+</div>
+
+<div id="Services" class="tabcontent">
+<H2> About us </h2>
+<p> Our objective is to deeply understand your illness in order to help you achieving a level of healing and health that permits you to be fitter and stronger.</p><hr>
+  <h3>OUR SERVICES</h3>
+<h2>Orthopatics</h2>
+
+<p>We are specialized in upper and lower limbs surgery (wounds, fracture, carpal tunnel release and Morton neuroma …), joint replacement (shoulder, knee and hip replacement) as well spinal surgery ( fracture, stenosis and arthrodesis). We fix bone deformities in children, using braces to straighten the child's bones.
+We treat sports related injuries, strains , sprains, dislocations as well ligament and tendon rupture.
+
+Our general surgeon encompasses a full range of emergency and elective inpatient and day case surgery. He is expert in his field and provides patients with comprehensive, compassionate pre- and post-operative care, offers a wide range of investigations and treatment for benign and malignant surgical diseases with specific sub-speciality interests in upper and lower gastrointestinal surgery, as well as a range of interventions to treat diseases of the biliary systems, and endocrine (thyroid) surgery.
+Our doctor tailors treatment to the patient’s individual needs; Using the latest techniques and technologies, he evaluates, treats and manages diseases or injuries that require elective or immediate surgery.
+From complex to routine surgeries, our surgeon strives to make a difference in our patients’ lives.
+In many cases, he can use noninvasive or minimally invasive techniques to diagnose disease. By using these techniques, he is able to diagnose potentially life-threatening conditions--such as cancer--quickly, accurately, and with little or no need for invasive surgery.
+Minimally invasive procedures offer several benefits when compared to conventional surgery, including:
+Less pain
+Faster recovery
+Less scarring
+Less injury to tissue
+Shorter hospital stays </p>
+
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+<h2> General surgeon </h2>
+<p>Our general surgeon encompasses a full range of emergency and elective inpatient and day case surgery. He is expert in his field and provides patients with comprehensive, compassionate pre- and post-operative care, offers a wide range of investigations and treatment for benign and malignant surgical diseases with specific sub-speciality interests in upper and lower gastrointestinal surgery, as well as a range of interventions to treat diseases of the biliary systems, and endocrine (thyroid) surgery.
+
+Our doctor tailors treatment to the patient’s individual needs; Using the latest techniques and technologies, he evaluates, treats and manages diseases or injuries that require elective or immediate surgery.
+
+From complex to routine surgeries, our surgeon strives to make a difference in our patients’ lives.
+
+In many cases, he can use noninvasive or minimally invasive techniques to diagnose disease. By using these techniques, he is able to diagnose potentially life-threatening conditions--such as cancer--quickly, accurately, and with little or no need for invasive surgery.
+
+Minimally invasive procedures offer several benefits when compared to conventional surgery, including:
+
+Less pain
+Faster recovery
+Less scarring
+Less injury to tissue
+Shorter hospital stays </p>
+<hr>
+</div>
+
+<div id="Appointment" class="tabcontent">
+
+
+	<!-- <img src="carrousel_4.jpg" alt="carrousel_4" style="width:100%"> -->
+	<h1> Patient registration portal for appointments online </h1>
+
+		<p>
+			patient ?<a href="patientRegister.php">click</a>
+		</p><hr>
+<h1> Admin user creation & login portal </h1>
+		<p>
+			Admin ?  <a href="AdminReg.php">click</a>
+		</p><hr>
+<h3> contact </h3>
+<p>2d Floor, Helweh building.<br>
+Azmi street<br>
+Tripoli, Lebanon<br>
+france</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
+
